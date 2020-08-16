@@ -257,7 +257,7 @@ nav ul li a{
 
 }
 
-.box{
+/* .box{
 	height: 150px;
 	background-color: blue;
 	overflow-x: scroll;
@@ -273,7 +273,7 @@ nav ul li a{
 	height: 80%;
 	width: 300px;
 	display: inline-block;
-}
+} */
 /*student work scroller*/
 /* .wrapper{
 	max-height:500px;
@@ -690,6 +690,8 @@ img {
 	  text-align: center;
 	 margin-top: 3%;
 	
+	 line-height: 50px;
+	 
 	  
   }
   
@@ -722,6 +724,7 @@ img {
 	  transition-duration: 0.4s;
 	  transition-property: transform;
 	  
+
   }
 .c2{
 	background-color: #B1D2DA;
