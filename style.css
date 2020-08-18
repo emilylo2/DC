@@ -129,13 +129,14 @@ nav ul li a{
 
 	background-image: url(fullsizeimport/Triangles.svg);
     background-repeat: no-repeat, repeat;
-    background-position: 100% 135%;
+    background-position: 100% 139%;
 }
 
 .h1-main {
 	font-weight:bold;
-	font-size: 3.5rem;
-	margin: 0.4rem;
+	font-size: 48px;
+
+	margin-top: 0px;
   }
 .p-main{
 	font-size: 16px;
@@ -143,12 +144,14 @@ nav ul li a{
 }
 
 .txt-type > .txt {
-	border-right: 0.2rem solid #777;
+	border-right: 0.2rem solid white;
+	font-size: 30px;
   }
 
   @media(min-width: 1200px) {
 	.h1-main {
-	  font-size: 2rem;
+	  font-size: 48px;
+	  margin-top: 0px;
 	}
   }
 
@@ -190,6 +193,7 @@ nav ul li a{
 }
 .button:hover{
 	transform: scale(1.1);
+	transition: .5s;
 }
 /*hmw header end*/
 
@@ -198,23 +202,32 @@ nav ul li a{
 	.container-impact{
 		display:flex;
 		flex-wrap: wrap;
+
+		background-image: url(fullsizeimport/SpecialTriangle\ \(1\).svg);
+    	background-repeat: no-repeat, repeat;
+    	background-position: 100% 139%;
 	}
 	.container-impact div{
-		padding-left:10px;
+		
 		padding-top: 2px;
 	}
 }
 .container-impact{
 	display:flex;
 	flex-wrap: wrap;
+	padding-left: 8%;
+	background-image: url(fullsizeimport/SpecialTriangle\ \(1\).svg);
+    background-repeat: no-repeat, repeat;
+    background-position: 100% 139%;
 
 }
 .container-impact div{
-	padding-left:100px;
+	
 	padding-top: 23px;
 }
 .impact{
 	flex:2;
+	
 }
 .stat1{
 	flex:1;
@@ -227,7 +240,7 @@ nav ul li a{
 }
 .small-txt{
 	color: #3090A1;
-	font-size: 24px;
+	
 }
 .big-txt{
 	color: #3090A1;
@@ -239,10 +252,26 @@ nav ul li a{
 .offerings{
 	min-height: 20rem;
 	padding: 8%;
+	padding-top: 0%;
 	color: #3090A1;
 	position:relative;
 }
 
+.subtitle{
+	padding-bottom: 1%;
+	padding-top:5%;
+}
+.subtitle2{
+	padding-bottom: 1%;
+}
+
+.subtitle-special{
+	padding-bottom: 1%;
+	padding-top: 4%;
+}
+.gap{
+	padding-top:5%;
+}
 
 .text-bkr{
 	background-color: #EFF6F7;
@@ -253,7 +282,7 @@ nav ul li a{
 	grid-template-columns: 1fr 1fr;
 	grid-gap:8% ;
 	height:50%;
-	padding-top: 2%;
+	
 
 }
 
@@ -399,6 +428,12 @@ nav ul li a{
 	padding:10px;
 	height:15vh;
 }
+.item-l{
+	background: #EFF6F7;
+	color:#3090A1;
+	padding:10px;
+	height:15vh;
+}
 .bio{
 	color: #3090A1;
 	background: #E8F2F4;
@@ -440,7 +475,11 @@ li :nth-child(2){
 	background-color:#EFF6F7 ;
 }
 
+.journey-map{
 
+	
+
+}
 
 .jmap-placeholder{
 	margin-left:15%;
@@ -573,6 +612,7 @@ img {
 }
 .button-small:hover{
 	transform: scale(1.1);
+	
 }
 
 
@@ -690,7 +730,6 @@ img {
 	  text-align: center;
 	 margin-top: 3%;
 	
-	 line-height: 50px;
 	 
 	  
   }
@@ -718,41 +757,40 @@ img {
 
 
 .c1{
-	  background-color: #EFF6F7;
-	  opacity:0.5;
+	  background-color:rgba(239, 246, 247, 0.7);
 	  border-radius: 50%;
 	  transition-duration: 0.4s;
 	  transition-property: transform;
-	  
+	  padding-top: 30%;
 
   }
 .c2{
-	background-color: #B1D2DA;
-	opacity:0.5;
+	background-color: rgba(177, 210, 218, 0.7);
 	border-radius: 50%;
 	transition-duration: 0.4s;
 	transition-property: transform;
+	padding-top: 30%;
 }
 .c3{
-	background-color: #EFBEAB;
-	opacity:0.5;
+	background-color: rgba(239, 190, 171,0.7);
 	border-radius: 50%;
 	transition-duration: 0.4s;
 	transition-property: transform;
+	padding-top: 30%;
 }
 .c4{
-	background-color: #BC5148;
-	opacity:0.5;
+	background-color: rgba(188, 81, 72, 0.7);
 	border-radius: 50%;
 	transition-duration: 0.4s;
 	transition-property: transform;
+	padding-top: 30%;
 }
 .c5{
-	background-color: #3F656F;
-	opacity:0.5;
+	background-color: rgba(63, 101, 111, 0.7);
 	border-radius: 50%;
 	transition-duration: 0.4s;
 	transition-property: transform;
+	padding-top: 40%;
 }
 
 
@@ -775,4 +813,41 @@ img {
 .c5:hover{
 	transform: scale(1.1);
 
+}
+
+
+
+
+
+
+
+
+.horizontal_slider{
+	display: block;
+	width: 100%;
+	overflow-x: scroll;
+	box-sizing: border-box;
+	background-color: #EFF6F7;
+	padding: 2%;
+}
+.slider_container{
+	display: block;
+	white-space: nowrap;
+	
+}
+.item{
+	display: inline-block;
+	margin-right: 10px;
+}
+.item img{
+	width: 20rem;
+}
+.item:hover{
+	transform: scale(1.01);
+	transition: .5s;
+}
+
+
+#item1{
+	padding: 1%;
 }
