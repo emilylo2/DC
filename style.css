@@ -12,6 +12,8 @@ a{
 body{
 	font-family: 'Montserrat';
 	margin-bottom:30%;
+
+
 }
 nav{
 	background: #3090A1;
@@ -72,6 +74,7 @@ nav ul li a{
 	}
 }
 @media(max-width:858px){
+
 	.checkbtn{
 		display: block;
 	}
@@ -127,9 +130,9 @@ nav ul li a{
 	position: relative;
 	
 
-	background-image: url(fullsizeimport/Triangles.svg);
+	background-image: url(fullsizeimport/TopTriangles.svg);
     background-repeat: no-repeat, repeat;
-    background-position: 100% 139%;
+    background-position: 100% 100%;
 }
 
 .h1-main {
@@ -167,11 +170,11 @@ nav ul li a{
 
   @media(max-width: 500px) {
 	.h1-main {
-	  font-size: 2.5rem;
+	  font-size: 2rem;
 	}
 
 	.p-main {
-	  font-size: 1.5rem;
+	  font-size: 1rem;
 	}
   }
 
@@ -198,138 +201,218 @@ nav ul li a{
 /*hmw header end*/
 
 /*stats*/
-@media(min-width:768px){
-	.container-impact{
-		display:flex;
-		flex-wrap: wrap;
-
-		background-image: url(fullsizeimport/SpecialTriangle\ \(1\).svg);
-    	background-repeat: no-repeat, repeat;
-    	background-position: 100% 139%;
-	}
-	.container-impact div{
-		
-		padding-top: 2px;
-	}
-}
-.container-impact{
-	display:flex;
-	flex-wrap: wrap;
+.container-impact2{
 	padding-left: 8%;
+	padding-top: 1.5%;
+	display: grid;
+	align-items: center;
 	background-image: url(fullsizeimport/SpecialTriangle\ \(1\).svg);
-    background-repeat: no-repeat, repeat;
-    background-position: 100% 139%;
+	height: 100px;
+	background-repeat: no-repeat, repeat;
+	background-position: 100.1% 139%;
+
+	
+	grid-template-areas:
+	"impact1 impact1 impact1 stat1 stat2 stat3" ;
+}
+.gi{
 
 }
-.container-impact div{
+.gi1{
+	grid-area: impact1;
+
+}
+.gi2{
+	grid-area: stat1;
 	
-	padding-top: 23px;
 }
-.impact{
-	flex:2;
-	
+.gi3{
+	grid-area: stat2;
+
 }
-.stat1{
-	flex:1;
+.gi4{
+	grid-area: stat3;
 }
-.stat2{
-	flex:1;
+
+@media only screen and (max-width:800px){
+	.container-impact2{
+		padding-left: 8%;
+		display: grid;
+		
+		background-image: url(fullsizeimport/SpecialTriangle\ \(1\).svg);
+		background-repeat: no-repeat, repeat;
+		background-position: 100% 0%;
+		height: 100px;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+		"impact1 impact1 impact1"
+		"stat1 stat2 stat3" ;
+	}	
+
+
+
 }
-.stat3{
-	flex:1;
-}
+
 .small-txt{
 	color: #3090A1;
 	
 }
 .big-txt{
 	color: #3090A1;
-	font-size: 48px;
+	font-size: 2em;
 }
 /*stats end*/
 
 /*offerings*/
-.offerings{
-	min-height: 20rem;
-	padding: 8%;
-	padding-top: 0%;
-	color: #3090A1;
-	position:relative;
-}
-
-.subtitle{
-	padding-bottom: 1%;
-	padding-top:5%;
-}
-.subtitle2{
-	padding-bottom: 1%;
-}
-
-.subtitle-special{
-	padding-bottom: 1%;
+ @media only screen and (min-width: 600px) {
+	
+.offerings2{
+	display: grid;
+	grid-gap: 2%;
+	padding-left: 8%;
+	padding-right: 8%;
 	padding-top: 4%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto 3em auto auto 3em auto auto;
+	grid-template-areas:
+	"events events"
+	"tb1 tb2"
+	"gap gap"
+	"work work"
+	"scroller scroller"
+	"gap2 gap2"
+	"mentorship toolkit"
+	"tb3 tb4";
+
+	color: #3090A1;	
+}
+.tb1{
+	margin-right: 5%;
+}
+.tb2{
+	margin-left: 5%;
+}
+.tb3{
+	margin-right: 5%;
+}
+.tb4{
+	margin-left: 5%;
+}
+.extrapadding{
+	margin-left: 5%;
+}
+} 
+@media only screen and (max-width: 600px) {
+.offerings2{
+	display: grid;
+	grid-gap: 1%;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-top: 8%;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto 2em auto auto 2em auto auto 2em auto auto;
+	grid-template-areas:
+	"events"
+	"tb1"
+	"tb2"
+	"gap"
+	"work"
+	"scroller"
+	"gap2"
+	"mentorship"
+	"tb3"
+	"gap3"
+	"toolkit"
+	"tb4";
+
+	color: #3090A1;
+}
 }
 .gap{
-	padding-top:5%;
+	grid-area:gap
+}
+.gap2{
+	grid-area: gap2;
+}
+.gap3{
+	grid-area: gap3;
 }
 
-.text-bkr{
+.subheader{
+	font-weight: bold;
+	font-size: 2em;
+}
+.txtwbkr{
 	background-color: #EFF6F7;
-	padding:5%;
+	padding: 5%;
 }
-.grid-item{
-	display:grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap:8% ;
-	height:50%;
+.events-title{
+	grid-area: events;
+}
+.tb1{
+	grid-area: tb1;
 	
-
+}
+.tb2{
+	grid-area: tb2;
+	
+}
+.work-title{
+	grid-area: work;
 }
 
-/* .box{
-	height: 150px;
-	background-color: blue;
+.horizontal_slider{
+	display: block;
+	width: 100%;
 	overflow-x: scroll;
-	overflow-y: hidden;
-	white-space: nowrap;
-}
-.box::-webkit-scrollbar{
-	display: none;
-}
-.item{
-	margin: 2%;
-	background-color: red;
-	height: 80%;
-	width: 300px;
-	display: inline-block;
-} */
-/*student work scroller*/
-/* .wrapper{
-	max-height:500px;
+	box-sizing: border-box;
 	background-color: #EFF6F7;
-	border:1px solid #ddd;
-	display:flex;
-	overflow-x: auto;
+	padding: 2%;
+	grid-area: scroller;
 }
-.wrapper::-webkit-scrollbar{
-	width:0;
-	display: none;
+.slider_container{
+	display: block;
+	white-space: nowrap;
+	
 }
-.wrapper img{
-	min-width: 300px;
-	height: 200px;
-	background: white;
-	margin: 10%;
-}	 */
-	
-	/* min-width:321px;
-	height:30px;
-	
-	text-align: center;
-	background-color: white;
-	margin-right:10px; */
+.item-p{
+	display: inline-block;
+	margin-right: 10px;
+}
+.item-p img{
+	width: 20rem;
+}
+.item-p:hover{
+	transform: scale(1.01);
+	transition: .5s;
+}
 
-/*student work scroller end*/
+
+#item1{
+	padding: 1%;
+}
+
+.yt-video:hover{
+	transform: scale(1.1);
+	transition: .5s;
+}
+
+.mentorship-title{
+	grid-area: mentorship;
+}
+.toolkit-title{
+	grid-area: toolkit;
+}
+.tb3{
+	grid-area: tb3;
+	
+}
+.tb4{
+	grid-area: tb4;
+
+}
+
 /*offerings end*/
 
 
@@ -351,15 +434,7 @@ nav ul li a{
 }
 
 
-.location2 {
-	position: absolute;
-	bottom: 48.8%;
-	right: 0%;
-	width: 25%;
-	height: auto;
 
-	
-  }
 
 
 
@@ -371,6 +446,7 @@ nav ul li a{
 	 padding-left: 10%;
 	 padding-right: 10%;
 	grid-row-gap: 1em;
+	
  
  }
 #item-title{
@@ -393,33 +469,42 @@ nav ul li a{
 	 text-align: center;
 	 color:#3090A1;
 	 margin-top: 3%;
-	 margin-bottom: 3%;
+	 margin-bottom: 1%;
  }
 
+.wrapper-pictures-mentor{
+	margin-left:10%;
+	margin-right: 10%;
+	margin-bottom: 1rem;
+	margin-top: 3%;
+	display:grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px,3fr));
+	grid-gap: 15%;
 
+}
 
  .wrapper-pictures{
 	margin-left:10%;
 	margin-right: 10%;
-	margin-top: 10%;
 	margin-bottom: 1rem;
 	display:grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px,3fr));
-	grid-gap: 2%;
+	grid-gap: 15%;
+
 } 
 
-
+/* 
 @media only screen and (min-width: 500px){
 	.wrapper-pictures{
 		margin-left:10%;
 		margin-right: 10%;
-		margin-top: 5rem;
+	
 		margin-bottom: 1rem;
 		display:grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px,3fr));
 		grid-gap: 15%;
 	} 
-  }
+  } */
 
 
 .item-d{
@@ -427,12 +512,29 @@ nav ul li a{
 	color:white;
 	padding:10px;
 	height:15vh;
+	
+
+	background-image: url(fullsizeimport/WArrow.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: 98% 50%;
 }
 .item-l{
 	background: #EFF6F7;
 	color:#3090A1;
 	padding:10px;
 	height:15vh;
+
+
+	background-image: url(fullsizeimport/BArrow.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: 98% 50%;
+}
+.item-ph{
+	background: white;
+	color:white;
+	padding:10px;
+	height:15vh;
+
 }
 .bio{
 	color: #3090A1;
@@ -465,6 +567,8 @@ li :nth-child(2){
 
 
 
+.object-fit_contain { object-fit: contain }
+
 
 .event{
 	height:20vh;
@@ -474,26 +578,203 @@ li :nth-child(2){
 	margin-bottom: 1rem;
 	background-color:#EFF6F7 ;
 }
-
 .journey-map{
-
-	
-
+	object-fit: cover;
+	width: 50px;
+	height: 100px;	
 }
-
-.jmap-placeholder{
-	margin-left:15%;
+.img-container{
+	margin-left: 15%;
 	margin-right: 15%;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	background-color:#EFF6F7 ;
-	height: 20vh;
 }
+
+
+.spacer{
+	background-color: white;
+	height: 35vh;
+}
+.img-container {
+	position: absolute;
+	top: 45%;
+	left: 10%;
+	transform: translateX(-10%);
+	width: 800px;
+	height: 600px;
+	
+	overflow: hidden;
+  }
+   
+  .img-container img {
+	max-width: 100%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) ;
+	animation: pic 3s;
+	animation-fill-mode: forwards;
+  }
+   
+  .img-container .overlay {
+	width: 100%;
+	margin-top: 25%;
+	margin-bottom: 50%;
+	height: 40%;
+	background-color: white;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: 90% 0%;
+	animation: overlay 3s;
+  }
+   
+  @keyframes pic {
+	0% { opacity: 0; }
+	50% { opacity: 0; }
+	51% { opacity: 1; }
+	100% { opacity: 1;transform: translate(-50%, -50%) ; }
+  }
+   
+  @keyframes overlay {
+	0% {
+	  transform: scaleX(0);
+	  transform-origin: 0% 50%;
+	}
+	50% {
+	  transform: scaleX(1);
+	  transform-origin: 0% 50%;
+	}
+	51% {
+	  transform: scaleX(1);
+	  transform-origin: 100% 50%;
+	}
+	100% {
+	  transform: scaleX(0);
+	  transform-origin: 100% 50%;
+	}
+  }
+
+
+
+
 .sub-header{
-	font-size: 24px;
+	font-size: 20px;
 	margin-left: 10%;
 	color:#3090A1;
+	margin-bottom: 1%;
 }
+
+/*teams*/
+@media only screen and (max-width: 600px) {
+	.container-teams{
+		display: grid;
+		grid-gap: 1%;
+		padding-left: 8%;
+		padding-right: 8%;
+		padding-top: 4%;
+		grid-template-columns: 1fr ;
+		grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto ;
+		grid-template-areas:
+		"teams"
+		"pimage1"
+		"pimage2"
+		"pimage3"
+		"pimage4"
+		"pimage5"
+		"pimage6"
+		"pimage7"
+		"pimage8"
+		"pimage9"
+		"pimage10";
+	}
+}
+@media only screen and (max-width: 1221px) {
+	.container-teams{
+		display: grid;
+		grid-gap: 1%;
+		padding-left: 8%;
+		padding-right: 8%;
+		padding-top: 4%;
+		grid-template-columns: 1fr 1fr ;
+		grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto ;
+		grid-template-areas:
+		"teams"
+		"pimage1"
+		"pimage2"
+		"pimage3"
+		"pimage4"
+		"pimage5"
+		"pimage6"
+		"pimage7"
+		"pimage8"
+		"pimage9"
+		"pimage10";
+	}
+}
+@media only screen and (min-width: 1221px) {
+.container-teams{
+	display: grid;
+	grid-gap: 5%;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-top: 4%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto ;
+	grid-template-areas:
+	"teams teams teams teams"
+	"pimage1 pimage2 pimage3 pimage4"
+	"pimage5 pimage6 pimage7 pimage8"
+	"pimage9 pimage10 filler filler";
+	color: #3090A1;
+}
+}
+.pimage{
+	background-color: #E8F2F4;
+}
+.tbio{
+	padding: 10px;
+	
+}
+.teams-subheader{
+	grid-area: teams;
+	text-align: center;
+
+}
+.pimage1{
+	grid-area: pimage1;
+}
+.pimage2{
+	grid-area: pimage2;
+}
+.pimage3{
+	grid-area: pimage3;
+}
+.pimage4{
+	grid-area: pimage4;
+}
+.pimage5{
+	grid-area: pimage5;
+}
+.pimage6{
+	grid-area: pimage6;
+}
+.pimage7{
+	grid-area: pimage7;
+}
+.pimage8{
+	grid-area: pimage8;
+}
+.pimage9{
+	grid-area: pimage9;
+}
+.pimage10{
+	grid-area: pimage10;
+}
+.filler{
+	grid-area: filler;
+}
+
+
+
 
 
 .wrapper-pictures-founding{
@@ -564,7 +845,7 @@ li :nth-child(2){
 
 
 
-.container-main-left {
+.container-events {
 	display: flex;
 	text-align:left;
 	flex-direction: column;
@@ -576,6 +857,21 @@ li :nth-child(2){
 	height:40vh;
 
 	background-image: url(fullsizeimport/Triangles-mission.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom right;
+}
+.container-mentorship {
+	display: flex;
+	text-align:left;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 0 3rem;
+	color: white;
+	background: #3090A1;
+	height:40vh;
+
+	background-image: url(fullsizeimport/MentorshipTriangles.svg);
     background-repeat: no-repeat, repeat;
     background-position: bottom right;
 }
@@ -794,6 +1090,7 @@ img {
 }
 
 
+
 .c1:hover{
 	transform: scale(1.1);
 
@@ -822,32 +1119,92 @@ img {
 
 
 
-.horizontal_slider{
-	display: block;
-	width: 100%;
-	overflow-x: scroll;
-	box-sizing: border-box;
-	background-color: #EFF6F7;
-	padding: 2%;
-}
-.slider_container{
-	display: block;
-	white-space: nowrap;
-	
-}
-.item{
-	display: inline-block;
-	margin-right: 10px;
-}
-.item img{
-	width: 20rem;
-}
-.item:hover{
-	transform: scale(1.01);
-	transition: .5s;
-}
 
 
-#item1{
-	padding: 1%;
+
+
+
+
+
+
+
+.container-events {
+	display: flex;
+	text-align:left;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 0 3rem;
+	color: white;
+	background: #3090A1;
+	height:40vh;
+
+	background-image: url(fullsizeimport/EventsTriangles.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom right;
+}
+.container-mentorship {
+	display: flex;
+	text-align:left;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 0 3rem;
+	color: white;
+	background: #3090A1;
+	height:40vh;
+
+	background-image: url(fullsizeimport/MentorshipTriangles.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom right;
+}
+.container-work {
+	display: flex;
+	text-align:center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 0 3rem;
+	color: white;
+	background: #3090A1;
+	height:40vh;
+
+
+	background-image: url(fullsizeimport/StudentWorkTriangles.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom right;
+}
+
+.container-work {
+	display: flex;
+	text-align:center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 0 3rem;
+	color: white;
+	background: #3090A1;
+	height:40vh;
+
+
+	background-image: url(fullsizeimport/ToolkitTriangles.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom right;
+}
+
+.container-about {
+	display: flex;
+	text-align:center;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 0 3rem;
+	color: white;
+	background: #3090A1;
+	height:40vh;
+
+
+	background-image: url(fullsizeimport/Triangles-mission.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom right;
 }
