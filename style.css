@@ -13,7 +13,6 @@ body{
 	font-family: 'Montserrat';
 	margin-bottom:30%;
 
-
 }
 nav{
 	background: #3090A1;
@@ -21,10 +20,9 @@ nav{
 	width: 100%;
 }
 
-
 label.logo{
 	color:white;
-	font-size: 25px;
+	font-size: 24px;
 	line-height: 80px;
 	padding: 0 40px;
 	font-weight: bold;
@@ -74,7 +72,10 @@ nav ul li a{
 	}
 }
 @media(max-width:858px){
-
+	label.logo{
+		font-size: 15px;
+		padding-left: 4% ;
+	}
 	.checkbtn{
 		display: block;
 	}
@@ -144,6 +145,12 @@ nav ul li a{
 .p-main{
 	font-size: 16px;
 	color:white;
+	
+}
+.p-main-left{
+	font-size: 16px;
+	color:white;
+	width: 40%;
 }
 
 .txt-type > .txt {
@@ -394,7 +401,7 @@ nav ul li a{
 }
 
 .yt-video:hover{
-	transform: scale(1.1);
+	transform: translateX(10px);
 	transition: .5s;
 }
 
@@ -578,14 +585,14 @@ li :nth-child(2){
 	margin-bottom: 1rem;
 	background-color:#EFF6F7 ;
 }
-.journey-map{
-	object-fit: cover;
-	width: 50px;
-	height: 100px;	
+.journey{
+	justify-content: center;
 }
 .img-container{
 	margin-left: 15%;
 	margin-right: 15%;
+	justify-content: center;
+	
 }
 
 
@@ -655,16 +662,14 @@ li :nth-child(2){
 
 
 
-
+/*teams + founders*/
 .sub-header{
 	font-size: 20px;
 	margin-left: 10%;
 	color:#3090A1;
 	margin-bottom: 1%;
 }
-
-/*teams*/
-@media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 600px) {
 	.container-teams{
 		display: grid;
 		grid-gap: 1%;
@@ -672,8 +677,13 @@ li :nth-child(2){
 		padding-right: 8%;
 		padding-top: 4%;
 		grid-template-columns: 1fr ;
-		grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto ;
+		grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto ;
 		grid-template-areas:
+		"founders"
+		"fimage1"
+		"fimage2"
+		"fimage3"
+		"fimage4"
 		"teams"
 		"pimage1"
 		"pimage2"
@@ -685,41 +695,43 @@ li :nth-child(2){
 		"pimage8"
 		"pimage9"
 		"pimage10";
+		color: #3090A1;
 	}
-}
-@media only screen and (max-width: 1221px) {
+	
+} 
+@media only screen and (min-width: 600px) {
 	.container-teams{
 		display: grid;
 		grid-gap: 1%;
 		padding-left: 8%;
 		padding-right: 8%;
-		padding-top: 4%;
-		grid-template-columns: 1fr 1fr ;
-		grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto ;
+		padding-top: 1%;
+		grid-template-columns: 1fr 1fr 1fr ;
+		grid-template-rows: auto auto auto auto auto auto auto auto ;
 		grid-template-areas:
-		"teams"
-		"pimage1"
-		"pimage2"
-		"pimage3"
-		"pimage4"
-		"pimage5"
-		"pimage6"
-		"pimage7"
-		"pimage8"
-		"pimage9"
-		"pimage10";
+		"founders founders founders"
+		"fimage1 fimage2 fimage3"
+		"fimage4 fimage4 fimage4"
+		"teams teams teams"
+		"pimage1 pimage2 pimage3"
+		"pimage4 pimage5 pimage6"
+		"pimage7 pimage8 pimage9"
+		"pimage10 filler filler";
+		color: #3090A1;
 	}
 }
-@media only screen and (min-width: 1221px) {
+@media only screen and (min-width: 1265px) {
 .container-teams{
 	display: grid;
-	grid-gap: 5%;
-	padding-left: 8%;
-	padding-right: 8%;
-	padding-top: 4%;
+	grid-gap: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 2%;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto auto auto auto ;
+	grid-template-rows: auto auto auto auto auto auto ;
 	grid-template-areas:
+	"founders founders founders founders"
+	"fimage1 fimage2 fimage3 fimage4"
 	"teams teams teams teams"
 	"pimage1 pimage2 pimage3 pimage4"
 	"pimage5 pimage6 pimage7 pimage8"
@@ -727,17 +739,42 @@ li :nth-child(2){
 	color: #3090A1;
 }
 }
+
 .pimage{
 	background-color: #E8F2F4;
+	margin: 4%;
+	position: relative;
 }
+
+
 .tbio{
 	padding: 10px;
-	
+	color: #E8F2F4;
+}
+
+.founders-subheader{
+	grid-area: founders;
+}
+.sh{
+	font-size: 20px;
+	margin-left: 1%;
+}
+.fimage1{
+	grid-area: fimage1;
+}
+.fimage2{
+	grid-area: fimage2;
+}
+.fimage3{
+	grid-area: fimage3;
+}
+.fimage4{
+	grid-area: fimage4;
 }
 .teams-subheader{
 	grid-area: teams;
 	text-align: center;
-
+	margin-top: 4%;
 }
 .pimage1{
 	grid-area: pimage1;
@@ -750,13 +787,84 @@ li :nth-child(2){
 }
 .pimage4{
 	grid-area: pimage4;
+	
 }
 .pimage5{
 	grid-area: pimage5;
 }
 .pimage6{
 	grid-area: pimage6;
+
 }
+.pimage:hover .overlay2 {
+	height: 100%;
+  }
+  .pimage:hover .socials {
+	height: 100%;
+	display: block;
+  }
+.fab{
+	font-size: x-large;
+}
+.overlay2 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #E8F2F4;
+	overflow: hidden;
+	width: 100%;
+	height: 20%;
+	transition: .5s ease;
+	
+  }
+  .text {
+	color: #3090A1;
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 55%;
+	width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: left;
+  }
+.socials{
+	display: none;
+}
+
+.pimage:hover .overlay1 {
+	height: 100%;
+  }
+.overlay1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #E8F2F4;
+	overflow: hidden;
+	width: 100%;
+	height: 20%;
+	transition: .5s ease;
+	
+  }
+  .text1 {
+	color: #3090A1;
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 55%;
+	padding-right: 10%;
+	padding-bottom: 5%;
+	width: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: left;
+  }
+
+
 .pimage7{
 	grid-area: pimage7;
 }
@@ -772,6 +880,7 @@ li :nth-child(2){
 .filler{
 	grid-area: filler;
 }
+/*teams + founders end*/
 
 
 
@@ -812,7 +921,7 @@ li :nth-child(2){
 	margin-left:15%;
 	margin-right: 15%;
 	margin-top: 1rem;
-	margin-bottom: 5%;
+	text-align: center;
 	font-size: 12px;
 
 }
@@ -1005,8 +1114,6 @@ img {
 	font-size: 22px;
 
 	margin: 0%;
-	
-	
   }
 
 
@@ -1175,7 +1282,7 @@ img {
     background-position: bottom right;
 }
 
-.container-work {
+.container-toolkit {
 	display: flex;
 	text-align:center;
 	flex-direction: column;
@@ -1198,13 +1305,340 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	height: 100%;
-	padding: 0 3rem;
 	color: white;
 	background: #3090A1;
 	height:40vh;
-
+	
 
 	background-image: url(fullsizeimport/Triangles-mission.svg);
     background-repeat: no-repeat, repeat;
     background-position: bottom right;
 }
+
+
+@media only screen and (max-width: 800px){
+	.container-projects{
+		display: grid;
+		margin-top: 20%;
+		margin-left: 10%;
+		margin-right: 10%;
+		justify-content: center;
+		text-align: center;
+		grid-gap: 10%;
+		grid-template-columns: 1fr ;
+		grid-template-rows: auto auto auto auto ;
+		grid-template-areas:
+		"card1" 
+		"card2"
+		"card3"
+		"card4";
+	}
+}
+@media only screen and (min-width: 800px){
+.container-projects{
+	display: grid;
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+	justify-content: center;
+	text-align: center;
+	grid-gap: 15%;
+	grid-template-columns: 1fr 1fr ;
+	grid-template-rows: auto auto ;
+	grid-template-areas:
+	"card1 card2"
+	"card3 card4";
+}
+}
+.box{
+	background-color: #E8F2F4;
+	padding-bottom: 6%;
+
+}
+.card1{
+	grid-area: card1;
+	
+}
+.card2{
+	grid-area: card2;
+}
+.card3{
+	grid-area: card3;
+}
+.card4{
+	grid-area: card4;
+}
+
+
+/*videos*/
+@media only screen and (max-width: 800px){
+	.container-videos{
+		display: grid;
+		margin-left: 10%;
+		margin-right: 10%;
+		grid-gap: 1%;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+		grid-template-areas:
+		"video"
+		"designprocess"
+		"v1"
+		"v2"
+		"v3"
+		"v4"
+		"v5"
+		"v6"
+		"designskills"
+		"v7"
+		"v8"
+		"v9"
+		"v10"
+		"portfolio"
+		"v11" 
+		"v12" 
+		"v13"
+		"career"
+		"v14"
+		"v15"
+		;
+	}
+	.video1{
+		grid-area: v1;
+		
+	}
+	.video2{
+		grid-area: v2;
+		
+	}
+	.video3{
+		grid-area: v3;
+		
+	}
+	.video4{
+		grid-area: v4;
+	
+	}
+	.video5{
+		grid-area: v5;
+		
+	}
+	.video6{
+		grid-area: v6;
+	
+	}
+	.designskills-subheader{
+		grid-area: designskills;
+	}
+	.video7{
+		grid-area: v7;
+	
+	}
+	.video8{
+		grid-area: v8;
+	
+	}
+	.video9{
+		grid-area: v9;
+		
+	}
+	.video10{
+		grid-area: v10;
+	
+	}
+	.filler1{
+		grid-area: filler1;
+	}
+	.filler2{
+		grid-area: filler2;
+	}
+	.portfolio-subheader{
+		grid-area: portfolio;
+	}
+	.video11{
+		grid-area: v11;
+	
+	}
+	.video12{
+		grid-area: v12;
+	
+	}
+	.video13{
+		grid-area: v13;
+		
+	}
+	.career-subheader{
+		grid-area: career;
+	}
+	.video14{
+		grid-area: v14;
+		
+	}
+	.video15{
+		grid-area: v15;
+		
+	}
+	.filler{
+		grid-area: filler;
+	}
+}
+@media only screen and (min-width: 800px){
+.container-videos{
+	display: grid;
+	margin-left: 10%;
+	margin-right: 10%;
+	grid-gap: 1%;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+	grid-template-areas:
+	"video video video"
+	"designprocess designprocess designprocess"
+	"v1 v2 v3"
+	"v4 v5 v6"
+	"designskills designskills designskills"
+	"v7 v8 v9"
+	"v10 filler1 filler2"
+	"portfolio portfolio portfolio"
+	"v11 v12 v13"
+	"career career career"
+	"v14 v15 filler"
+	;
+}
+.video1{
+	grid-area: v1;
+	margin-right: 8%;
+	margin-bottom: 8%;
+}
+.video2{
+	grid-area: v2;
+	margin-right: 4%;
+	margin-left: 4%;
+	margin-bottom: 8%;
+}
+.video3{
+	grid-area: v3;
+	margin-left: 8%;
+	margin-bottom: 8%;
+}
+.video4{
+	grid-area: v4;
+	margin-right: 8%;
+	margin-bottom: 10%;
+}
+.video5{
+	grid-area: v5;
+	margin-right: 4%;
+	margin-left: 4%;
+	margin-bottom: 10%;
+}
+.video6{
+	grid-area: v6;
+	margin-left: 8%;
+	margin-bottom: 10%;
+}
+.designskills-subheader{
+	grid-area: designskills;
+}
+.video7{
+	grid-area: v7;
+	margin-right: 8%;
+	margin-bottom: 8%;
+}
+.video8{
+	grid-area: v8;
+	margin-right: 4%;
+	margin-left: 4%;
+	margin-bottom: 8%;
+}
+.video9{
+	grid-area: v9;
+	margin-left: 8%;
+	margin-bottom: 8%;
+}
+.video10{
+	grid-area: v10;
+	margin-right: 8%;
+	margin-bottom: 10%;
+}
+.filler1{
+	grid-area: filler1;
+}
+.filler2{
+	grid-area: filler2;
+}
+.portfolio-subheader{
+	grid-area: portfolio;
+}
+.video11{
+	grid-area: v11;
+	margin-right: 8%;
+	margin-bottom: 10%;
+}
+.video12{
+	grid-area: v12;
+	margin-right: 4%;
+	margin-left: 4%;
+	margin-bottom: 10%;
+}
+.video13{
+	grid-area: v13;
+	margin-left: 8%;
+	margin-bottom: 10%;
+}
+.career-subheader{
+	grid-area: career;
+}
+.video14{
+	grid-area: v14;
+	margin-right: 8%;
+	margin-bottom: 8%;
+}
+.video15{
+	grid-area: v15;
+	margin-right: 4%;
+	margin-left: 4%;
+	margin-bottom: 8%;
+}
+.filler{
+	grid-area: filler;
+}
+}
+.light{
+	background-color: #E8F2F4;
+	color: #3090A1;
+	padding: 8%;
+	padding-bottom: 5%;
+	padding-bottom: 20%;
+	
+
+	background-image: url(fullsizeimport/BArrow.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: 96% 50%;
+}
+.dark{
+	background-color: #3090A1;
+	color: white;
+	padding: 8%;
+	padding-bottom: 20%;
+
+	background-image: url(fullsizeimport/WArrow.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: 96% 50%;
+}
+.video-name{
+	font-size: 20px;
+}
+.creator{
+	font-size: 14px;
+}
+.video-type{
+	font-size: 20px;
+	color: #3090A1;
+}
+.video-subheader{
+	grid-area: video;
+}
+.designprocess-subheader{
+	grid-area: designprocess;
+}
+
+
