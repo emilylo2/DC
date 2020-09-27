@@ -22,6 +22,7 @@
 			<li><a class="tb" href="work.html">Work</a></li>
 			<li><a class="tb" href="mentorship.html">Mentorship</a></li>
 			<li><a class="tb" href="toolkit.html">Toolkit</a></li>
+			<li><a class="tb" href="toolkit.html">Donate</a></li>
 		</ul>
 	</nav>
 
@@ -31,7 +32,7 @@
 			<h1 class="h1-main">Events</h1>
 			<p class="p-main-left">Whether you are a new desginer or have been designing for ages, come join us at our events hosted through out the academic year and summer.
 			</p>
-			<button class="button"><a href="#">Our Calander</a></button>
+			<button class="button"><a href="#">Our Calendar</a></button>
         </div>
        
 	</div>
@@ -41,5 +42,80 @@
 	<div class="event"></div>
 
 	<h1 class= centered-text>Past Events</h1>
+
+<h1 class="collapsible">Session 2</h1>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<h1 class="collapsible">Session 1</h1>
+<div class="content">
+	<p>Session 1 was a 6-week design sprint to help students learn the design process. The main actvities for students were to:</p>
+	<ul class="list">
+		<li>Learn design skills with workshops and talks on Friday afternoons</li>
+		<li>Pick a design project and a team to work with for the duration of the design spring</li>
+		<li>Follow Google’s Design Sprint methodology</li>
+		<li>Refine ideas with mentorship from students, faculty, and industry experts</li>
+		<li>Join a community of designers on our Slack workspace.</li>
+	</ul>
+
+	<h2>Prompts</h2>
+	<p><strong>Maintaining Connections #s1-connectionsstrong</strong><br>
+		How might we help people maintain relationships in a more global and fragmented world? </p>
+		<br>
+		<p><strong>Digital Wellbeing #s1-wellbeing</strong><br>
+		How might we increase awareness and mindfulness around our increasing technology usage?</p>
+		<br>
+	<p><strong>Mitigating Behaviours #s1-mitigate</strong><br>
+		How might we mitigate contagious behaviors at a personal and public level?</p>
+		<br>
+	<p><strong>Establishing Routines #s1-routine</strong><br>
+		How might we help people build a routine during the quarantine?</p>
+		<br>
+	<p><strong>Shuttle Service Redesign #s1-shuttle</strong><br>
+		How might we make Columbia’s shuttle bus service easy to understand and use?</p>
+		<br>
+	<p><strong>Student Services Redesign #s1-cu-online</strong><br>
+		How might we transform Columbia’s digital tools (SSOL / Vergil / CULPA) into a streamlined experience?</p>
+		<br>
+	<p><strong>Redesign Your Favourite App #s1-byo-redesign</strong><br>
+		Take an app that you use often, identify some pain points, and create improved solutions!</p>
+		<br>
+	<p><strong>Bring Your Own Idea or Startup #s1-byo-startup</strong><br>
+		Got an idea on your mind? Working on a startup right now? Bring it along to our summer session!</p>
+</div>
+
+
+<h1 class="collapsible">Design Day</h1>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+
+
+<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+	
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+	</script>
+
+
+
+</div>
+<footer id="footer">Say hi 👋 <a href = "mailto: designatcu@columbia.edu">designatcu@columbia.edu </a></footer>
+</div>
+
 </body>
 </html>
