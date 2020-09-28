@@ -454,7 +454,6 @@ nav ul li a{
 	grid-area: tb4;
 
 }
-
 /*offerings end*/
 
 
@@ -476,12 +475,7 @@ nav ul li a{
 }
 
 
-
-
-
-
-
-
+/*design process*/
  .container-process{
 	 display:grid;
 	 grid-template-columns: 0.5fr 2fr;
@@ -513,7 +507,9 @@ nav ul li a{
 	 margin-top: 3%;
 	 margin-bottom: 1%;
  }
+ /*design process end*/
 
+ /*mentor pictures start */
 .wrapper-pictures-mentor{
 	margin-left:10%;
 	margin-right: 10%;
@@ -524,65 +520,67 @@ nav ul li a{
 	grid-gap: 15%;
 
 }
-
- .wrapper-pictures{
-	margin-left:10%;
-	margin-right: 10%;
-	margin-bottom: 1rem;
-	display:grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px,3fr));
-	grid-gap: 15%;
-
-} 
-
-.item-d{
-	background: var(--darkBlue);
-	color:var(--white);
-	padding:10px;
-	height:15vh;
-	
-
-	background-image: url(fullsizeimport/WArrow.svg);
-    background-repeat: no-repeat, repeat;
-    background-position: 98% 50%;
-}
-.item-l{
-	background: var(--lightBlue);
-	color:var(--darkBlue);
-	padding:10px;
-	height:15vh;
-
-
-	background-image: url(fullsizeimport/BArrow.svg);
-    background-repeat: no-repeat, repeat;
-    background-position: 98% 50%;
-}
-.item-ph{
-	background: var(--white);
-	color:var(--white);
-	padding:10px;
-	height:15vh;
-
-}
 .bio{
 	color: var(--darkBlue);
 	background: var(--lightBlue);
 	padding:10px;
 }
+/*mentor pictures end*/
 
+.ul-link{
+	color: var(--darkBlue);
+	text-decoration: underline;
+}
 
-/*journey map*/
-.object-fit_contain { object-fit: contain }
-
+/*upcomming events start */
+@media only screen and (max-width: 1100px) {
 
 .event{
-	height:20vh;
+	display: grid;
+	height:auto;
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	background-color:var(--lightBlue);
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas: 
+	"event-pic"
+	"event-text";
+	overflow: auto;
 }
+}
+@media only screen and (min-width: 1100px) {
+	.event{
+		display: grid;
+		height:auto;
+		margin-left: 10%;
+		margin-right: 10%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"event-pic event-text";
+		overflow: auto;
+	}
+}
+.event-pic{
+	grid-area: "event-pic";
+	height: auto;
+	
+}
+.event-text{
+	grid-area: "event-txt";
+	background-color:var(--lightBlue);
+	height: 98%;
+	padding: 2%;
+	color: var(--darkBlue);
+}
+/*upcoming events end*/
+
+/*journey map start*/
+.object-fit_contain { object-fit: contain }
 .journey{
 	justify-content: center;
 }
@@ -592,8 +590,6 @@ nav ul li a{
 	justify-content: center;
 	
 }
-
-
 .spacer{
 	background-color: var(--white);
 	height: 35vh;
@@ -657,6 +653,15 @@ nav ul li a{
 	  transform-origin: 100% 50%;
 	}
   }
+  .description{
+	color:var(--darkBlue);
+	margin-left:15%;
+	margin-right: 15%;
+	margin-top: 1rem;
+	text-align: center;
+	font-size: 12px;
+
+}
 
 /*journey map end*/
 
@@ -776,6 +781,7 @@ nav ul li a{
 .tbio{
 	padding: 10px;
 	color: var(--lightBlue);
+	
 }
 
 .founders-subheader{
@@ -842,6 +848,7 @@ nav ul li a{
 	width: 100%;
 	height: 20%;
 	transition: .5s ease;
+	
 	
   }
   .text {
@@ -974,53 +981,7 @@ nav ul li a{
 }
 /*teams + founders end*/
 
-
-
-
-
-.wrapper-pictures-founding{
-	margin-left:10%;
-	margin-right: 10%;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	display:grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px,3fr));	
-	
-} 
-
-
-@media only screen and (min-width: 500px){
-	.wrapper-pictures-founding{
-		margin-left:10%;
-		margin-right: 10%;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-		display:grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px,3fr));
-		grid-gap: 8%;
-	} 
-  }
-
-.bio2{
-	background-color: var(--lightBlue);
-	padding:10px;
-	color: var(--darkBlue);
-	margin:0px;
-}
-
-.description{
-	color:var(--darkBlue);
-	margin-left:15%;
-	margin-right: 15%;
-	margin-top: 1rem;
-	text-align: center;
-	font-size: 12px;
-
-}
-
-
-
-
+/*toolkit questions start*/
 .questions-container{
 	display:grid;
 	grid-template-columns: 1fr 1fr;
@@ -1028,8 +989,6 @@ nav ul li a{
 	margin-left:30%;
 	margin-right:30%;
 	margin-top: 3em;
-	
-
 }
 .question{
    color: var(--darkBlue);
@@ -1043,41 +1002,7 @@ nav ul li a{
 	font-size: x-large;
    
 }
-
-
-
-.container-events {
-	display: flex;
-	text-align:left;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	padding: 0 3rem;
-	color: var(--white);
-	background: var(--darkBlue);
-	height:40vh;
-
-	background-image: url(fullsizeimport/Triangles-mission.svg);
-    background-repeat: no-repeat, repeat;
-    background-position: bottom right;
-}
-.container-mentorship {
-	display: flex;
-	text-align:left;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	padding: 0 3rem;
-	color: var(--white);
-	background: var(--darkBlue);
-	height:40vh;
-
-	background-image: url(fullsizeimport/MentorshipTriangles.svg);
-    background-repeat: no-repeat, repeat;
-    background-position: bottom right;
-}
-
-
+/*toolkit questions end*/
 
 img {
     max-width: 100%;
@@ -1086,7 +1011,7 @@ img {
 }
 
  
-
+/*work +mentorship buttons start*/
 .button-div{
 	display: flex;
     justify-content: center;
@@ -1108,83 +1033,9 @@ img {
 
 }
 .button-small:hover{
-	transform: scale(1.1);
-	
+	transform: scale(1.1);	
 }
-
-
-
-
-@media only screen and (min-width: 500px){
-	.test{
-		margin-left:20%;
-		margin-right: 20%;
-		margin-top: 8%;
-		margin-bottom: 1rem;
-		display:grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px,2fr));
-		grid-gap: 20%;
-	}	
-  }
-
-
-.test{
-	margin-left:20%;
-	margin-right: 20%;
-	margin-top: 8%;
-	margin-bottom: 1rem;
-	display:grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px,2fr));
-	grid-gap: 20%;
-}
-
-.card{
-	width: 340px;
-	background: var(--lightBlue);
-	padding-bottom: 7%;
-	
-  }
-  
-  .card-image{
-	width: 150%;
-	height: 100%;
-	background-color: var(--white);
-  }
-  
-  .profile-image img{
-	z-index: 1;
-	width: 80%;
-	height: auto;
-	position: relative;
-	margin-top: -75px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	
-	transition-duration: 0.4s;
-	transition-property: transform;
-  }
-  
-  .profile-image img:hover{
-	transform: scale(1.1);
-  }
-  
- .card-content{
-	 padding:5%;
-	 text-align: left;
-	 color: var(--darkBlue);
- } 
-  .card-content h3{
-	font-size: 22px;
-
-	margin: 0%;
-  }
-
-
-
-
-
-
+/*work +mentorship buttons end*/
 
 /*circles start*/
   .grid{
@@ -1256,9 +1107,6 @@ img {
 	transition-property: transform;
 	padding-top: 40%;
 }
-
-
-
 .c1:hover{
 	transform: scale(1.1);
 
@@ -1279,14 +1127,10 @@ img {
 	transform: scale(1.1);
 
 }
-
 /*circles end*/
 
 
-
-
-
-
+/*page headers start*/
 .container-events {
 	display: flex;
 	text-align:left;
@@ -1366,8 +1210,9 @@ img {
     background-repeat: no-repeat, repeat;
     background-position: bottom right;
 }
+/*page headers end*/
 
-
+/*student work cards start */
 @media only screen and (max-width: 800px){
 	.container-projects{
 		display: grid;
@@ -1401,6 +1246,40 @@ img {
 	"card1 card2"
 	"card3 card4";
 }
+.card-image{
+	width: 150%;
+	height: 100%;
+	background-color: var(--white);
+  }
+  
+  .profile-image img{
+	z-index: 1;
+	width: 80%;
+	height: auto;
+	position: relative;
+	margin-top: -75px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	transition-duration: 0.4s;
+	transition-property: transform;
+  }
+  
+  .profile-image img:hover{
+	transform: scale(1.1);
+  }
+  
+ .card-content{
+	 padding:5%;
+	 text-align: left;
+	 color: var(--darkBlue);
+ } 
+  .card-content h3{
+	font-size: 22px;
+
+	margin: 0%;
+  }
 }
 .box{
 	background-color: var(--lightBlue);
@@ -1420,7 +1299,7 @@ img {
 .card4{
 	grid-area: card4;
 }
-
+/*student work cards end*/
 
 /*videos*/
 @media only screen and (max-width: 800px){
@@ -1703,11 +1582,10 @@ img {
 .designprocess-subheader{
 	grid-area: designprocess;
 }
-
+/*videos end*/
 
 /*past events*/
 .collapsible {
-	
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-top: 1em;
@@ -1722,13 +1600,10 @@ img {
 	
 	outline: none;
 	font-size: 20px;
-
   }
-  
-  .active, .collapsible:hover {
-	
-  }
-  
+  .plus{
+	float:right;
+}
   .content {
 	display: list-item;
 	margin-left: 10%;
@@ -1740,9 +1615,18 @@ img {
 	background-color: var(--lightBlue);
 	color: var(--darkBlue);
   }
-
+  .list{
+	display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+/*past events end*/
   
-
+/*footer start*/
   #footer {
 	position: fixed;
    left: 0;
@@ -1757,18 +1641,9 @@ img {
   #footer a{
 	  color: var(--darkBlue);
   }
-  
+  /*footer end*/
   
 
-  .list{
-	display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-  }
 
 .tri1{
 	background-image: url(fullsizeimport/FadedTriangles1\ \(1\).svg), url(fullsizeimport/FadedTriangles2.svg), url(fullsizeimport/FadedTriangles5.svg);
