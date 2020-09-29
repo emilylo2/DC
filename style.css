@@ -71,7 +71,7 @@ nav ul li a{
 #check{
 	display:none;
 }
-@media(max-width:952px){
+@media(max-width:1000px){
 	label.logo{
 		font-size: 30px;
 		padding-left: 50px ;
@@ -80,7 +80,7 @@ nav ul li a{
 		font-size:16px;
 	}
 }
-@media(max-width:858px){
+@media(max-width:1000px){
 	label.logo{
 		font-size: 15px;
 		padding-left: 4% ;
@@ -590,10 +590,7 @@ nav ul li a{
 	justify-content: center;
 	
 }
-.spacer{
-	background-color: var(--white);
-	height: 35vh;
-}
+
 .img-container {
 	position: absolute;
 	top: 45%;
@@ -769,6 +766,12 @@ nav ul li a{
 	"advisor13 afiller afiller afiller";
 	color: var(--darkBlue);
 }
+}
+.container-intro{
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 2%;
+	
 }
 
 .pimage{
@@ -1221,14 +1224,42 @@ img {
 		margin-right: 10%;
 		justify-content: center;
 		text-align: center;
-		grid-gap: 10%;
+		grid-gap: 9%;
 		grid-template-columns: 1fr ;
-		grid-template-rows: auto auto auto auto ;
+		grid-template-rows: auto auto auto auto auto auto auto auto ;
 		grid-template-areas:
 		"card1" 
 		"card2"
 		"card3"
-		"card4";
+		"card4"
+		"card5"
+		"card6"
+		"card7"
+		"card8";
+
+		padding-bottom: 100vh;
+	}
+	.card-content{
+		padding:5%;
+		text-align: left;
+		color: var(--darkBlue);
+	} 
+	.profile-image img{
+		z-index: 1;
+		width: 80%;
+		height: auto;
+		position: relative;
+		margin-top: -75px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		
+		transition-duration: 0.4s;
+		transition-property: transform;
+	  }
+	  .spacer{
+		background-color: var(--white);
+		height: 100vh;
 	}
 }
 @media only screen and (min-width: 800px){
@@ -1239,21 +1270,27 @@ img {
 	margin-right: 10%;
 	justify-content: center;
 	text-align: center;
-	grid-gap: 15%;
+	grid-gap: 9%;
 	grid-template-columns: 1fr 1fr ;
-	grid-template-rows: auto auto ;
+	grid-template-rows: auto auto auto auto ;
 	grid-template-areas:
 	"card1 card2"
-	"card3 card4";
+	"card3 card4"
+	"card5 card6"
+	"card7 card8";
+}
+.spacer{
+	background-color: var(--white);
+	height: 60vh;
 }
 .card-image{
 	width: 150%;
-	height: 100%;
+	height: 5%;
 	background-color: var(--white);
   }
   
   .profile-image img{
-	z-index: 1;
+	
 	width: 80%;
 	height: auto;
 	position: relative;
@@ -1298,6 +1335,18 @@ img {
 }
 .card4{
 	grid-area: card4;
+}
+.card5{
+	grid-area: card5;
+}
+.card6{
+	grid-area: card6;
+}
+.card7{
+	grid-area: card7;
+}
+.card8{
+	grid-area: card8;
 }
 /*student work cards end*/
 
@@ -1652,3 +1701,10 @@ img {
 	
 }
 
+.circle-img{
+	
+	padding-left: 30%;
+	padding-right: 30%;
+	padding-top: 2%;
+
+}
